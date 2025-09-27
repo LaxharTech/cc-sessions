@@ -19,9 +19,9 @@ calculate_context() {
     
     # Determine usable context limit (80% of theoretical before auto-compact)
     if [[ "$model_name" == *"Sonnet"* ]]; then
-        context_limit=800000   # 800k usable for 1M Sonnet models
+        context_limit=170000   # 800k usable for 1M Sonnet models
     else
-        context_limit=160000   # 160k usable for 200k models (Opus, etc.)
+        context_limit=170000   # 160k usable for 200k models (Opus, etc.)
     fi
     
     if [[ -n "$transcript_path" && -f "$transcript_path" ]]; then
